@@ -18,7 +18,7 @@
 ## 📖 Table of Contents
 - [Description](#-description)
 - [Features](#-features)
-- [Installation](#-installation)
+- [Installation](#%EF%B8%8F-installation)
 - [Usage](#-usage)
 - [Project Structure](#-project-structure)
 - [Examples](#-examples)
