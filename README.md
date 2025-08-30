@@ -1,7 +1,7 @@
 
 <div align="center">
   <h2>libft - 42 project</h2>
-  <img src="./bin/minishell.png"  />
+  <img src="./bin/libft.png"  />
   <br>
 </div>
 
@@ -29,19 +29,42 @@
 ---
 
 ## 📝 Description
-`minishell` is a simplified shell that mimics the behavior of `bash`.  
-It can execute commands, handle redirections, pipes, and several builtins.
+The **libft** project consists of coding a library of essential C functions,  
+which will then be reused in almost every other 42 project.  
+
+This library includes reimplementations of standard C functions (from `<ctype.h>`, `<string.h>`, etc.)  
+as well as additional utility functions (linked lists, memory handling, string manipulation…).
 
 ---
 
 ## ✨ Features
-- ✅ Execute commands using `execve`
-- ✅ Pipe handling `|`
-- ✅ Redirections `>`, `<`, `>>`
-- ✅ Environment variables
-- ✅ Signal handling (`Ctrl-C`, `Ctrl-D`, `Ctrl-\`)
-- ✅ Builtins (`cd`, `echo`, `pwd`, `export`, `unset`, `env`, `exit`)
-<!-- - 🚧 Advanced expansions (in progress) --> 
+List of functions:
+
+### 🔤 Character checks & conversions
+- `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`
+- `ft_tolower`, `ft_toupper`
+
+### 🧵 String functions
+- `ft_strlen`, `ft_strlcpy`, `ft_strlcat`
+- `ft_strncmp`, `ft_strchr`, `ft_strrchr`, `ft_strnstr`
+- `ft_strdup`, `ft_strjoin`, `ft_strtrim`, `ft_split`
+- `ft_substr`
+
+### 💾 Memory functions
+- `ft_memset`, `ft_memcpy`, `ft_memmove`
+- `ft_memchr`, `ft_memcmp`
+- `ft_bzero`, `ft_calloc`
+
+### 🔢 Conversions
+- `ft_atoi`, `ft_itoa`
+
+### 🖊 File descriptors
+- `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`
+
+### 🔗 Linked list utilities (bonus part)
+- `ft_lstnew`, `ft_lstadd_front`, `ft_lstadd_back`
+- `ft_lstsize`, `ft_lstlast`
+- `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`, `ft_lstmap`
 
 ---
 
@@ -52,23 +75,29 @@ Requirements:
 - `make`
 
 ```bash
-git clone https://github.com/<your-username>/minishell.git
-cd minishell
+git clone https://github.com/LogUmi/minishell.git
+cd libft
 make
-./minishell
 ```
+This will generate a `libft.a` file.
 
 ---
 
 ## 🖥 Usage
-Example run:
+To use `libft` in your own project, compile it and link it:
 
 ```bash
-$ ./minishell
-minishell> echo "Hello World"
-Hello World
-minishell> ls -l | grep minishell > output.txt
-minishell> exit
+gcc main.c -L. -lft -o my_program
+```
+or
+```bash
+gcc main.c libft.a -o my_program
+```
+
+In your source files, include the header:
+
+```c
+#include "libft.h"
 ```
 
 ---
@@ -78,38 +107,58 @@ minishell> exit
 ```
 .
 ├── bin/                # Content for README
-├── libft/              # Autorized functions library
+├── includes/           # Header files (.h)
 ├── srcs/               # Source code (.c)
-├── subject_and_doc/    # Project 42 subject
+├── fr.subject.pdf	    # Project 42 subject
 ├── Makefile
-├── README.md
-├── fshell.sh            # Script to run Valgrind (Linux)
-├── minishell.h          # Header files (.h)
-└── readline_leaks.supp  # arguments to ignore readline known leaks with Valgrind
+└── README.md
 ```
 
 ---
 
 ## 🔎 Examples
-- `ls -la | grep .c > sources.txt`
-- `echo "Hello $USER"`
-- `cat < input.txt | grep error >> log.txt`
+
+```c
+#include <stdio.h>
+#include "libft.h"
+
+int	main(int argc, char *argv[])
+{
+	int	i;
+	
+	i = argc - 1;
+	if (argc <= 1)
+		return (0);
+	while (i > 0)
+	{
+		printf("%s has %lu characters\n", argv[i], ft_strlen(argv[i]));
+		i--;
+	}
+	return (0);
+}
+```
+then compile & run:
+```bash
+gcc main.c libft.a -o my_program
+./ my_program string1 "string2" ... etc
+```
+Example output:
+```
+anotherstring has 13 characters
+string2 has 7 characters
+string1 has 7 characters
+```
 
 ---
 
 ## 🚀 Roadmap
-<!-- - [ ] Add logical operators `&&` and `||`
-- [ ] Add command history
-- [ ] Implement auto-completion -->
-
-There's no implementation in sight at this time.
+This project is the original version that was evaluated at 42 and will remain in this state.  
+A maintained implementation of this project continues to live on through **my libft**.
 
 ---
 
 ## 👤 Credits
-Project developed by :
-- **Loïc Gérard** – 📧 Contact: lgerard@studend.42perpignan.fr - [École 42 Perpignan](https://42perpignan.fr).
-- [**Greg197819**](https://github.com/Greg197819).
+Project developed by **Loïc Gérard** – 📧 Contact: lgerard@studend.42perpignan.fr - [École 42 Perpignan](https://42perpignan.fr).
 
 ---
 
