@@ -10,8 +10,8 @@
 ![42](https://img.shields.io/badge/school-42-black)
 ![Status](https://img.shields.io/badge/status-completed-brightgreen)
 
-> A reimplementation of a minimalist UNIX shell in C, developed as part of the **École 42** curriculum.  
-> The goal is to understand the low-level mechanisms of a shell (fork, exec, pipes, signals...).
+> `libft` is the very first project of the **École 42** curriculum.  
+> The goal is to create a personal **C standard library**, by reimplementing standard functions and adding utility functions for future projects.
 
 ---
 
