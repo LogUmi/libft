@@ -75,7 +75,7 @@ Requirements:
 - `make`
 
 ```bash
-git clone https://github.com/LogUmi/minishell.git
+git clone https://github.com/LogUmi/libft.git
 cd libft
 make
 ```
@@ -140,7 +140,7 @@ int	main(int argc, char *argv[])
 then compile & run:
 ```bash
 gcc main.c libft.a -o my_program
-./ my_program string1 "string2" anotherstring
+./my_program string1 "string2" anotherstring
 ```
 Example output:
 ```
