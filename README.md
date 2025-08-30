@@ -140,7 +140,7 @@ int	main(int argc, char *argv[])
 then compile & run:
 ```bash
 gcc main.c libft.a -o my_program
-./ my_program string1 "string2" ... etc
+./ my_program string1 "string2" anotherstring
 ```
 Example output:
 ```

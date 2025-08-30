@@ -15,7 +15,6 @@ test
 # Build directories
 obj/
 build/
-bin/
 
 # Libft / other 42 libs
 libft.a
