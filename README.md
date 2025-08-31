@@ -120,7 +120,7 @@ In your source files, include the header:
 
 ```c
 #include <stdio.h>
-#include "libft.h"
+#include "includes/libft.h"
 
 int	main(int argc, char *argv[])
 {
