@@ -110,6 +110,7 @@ In your source files, include the header:
 ├── includes/           # Header files (.h)
 ├── srcs/               # Source code (.c)
 ├── fr.subject.pdf	    # Project 42 subject
+├── licence.txt		    # License MIT
 ├── Makefile
 └── README.md
 ```
