@@ -1,6 +1,5 @@
-
 <div align="center">
-  <h2>libft - 42 project</h2>
+  <h1>libft - 42 project</h1>
   <img src="./bin/libft.png"  />
   <br>
 </div>
@@ -110,7 +109,7 @@ In your source files, include the header:
 ├── includes/           # Header files (.h)
 ├── srcs/               # Source code (.c)
 ├── fr.subject.pdf	    # Project 42 subject
-├── LICENSE.txt		    # License MIT
+├── LICENSE			    # License MIT
 ├── Makefile
 └── README.md
 ```
@@ -164,7 +163,7 @@ Project developed by **Loïc Gérard** – 📧 Contact: lgerard@studend.42perpi
 ---
 
 ## 📜 License
-This project is licensed under the MIT License. You are free to use, modify, and distribute it.
+MIT License – see the [LICENSE](./LICENSE) file for details.
 
 > ⚠️ **Note for students**  
 > If you are a student at 42 (or elsewhere), it is strongly recommended **not to copy/paste** this code.  
